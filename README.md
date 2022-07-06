@@ -28,3 +28,5 @@ In my configuration, my yubikey (setup from drduh's [guide](https://github.com/d
 
 Sometimes after a while the gpg agent will die / timeout and you will need to restart it - 
 There is some more work to be done on that.
+
+Some more re-write stuff
