@@ -1,0 +1,4 @@
+tasks:
+  - before: |
+      gpg --keyserver keys.openpgp.org --recv-keys 5993621FD9D214E212E421C3AC3A6CB9E464DBDA
+      gpgconf --kill gpg-agent
