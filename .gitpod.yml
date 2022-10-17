@@ -6,6 +6,6 @@ tasks:
     before: |
       if [[ -v GPG_ID && ! -z "$GPG_ID" ]]; then gpg --keyserver keys.openpgp.org --recv-keys ${GPG_ID} && gpgconf --kill gpg-agent && git config --global user.signingkey $GPG_ID; fi
     command: |
-      screen -d -m sudo tailscaled --state=mem:
+      tmux new-session -d -s tailscaled sudo tailscaled --state=mem:
       if [[ -v TS_AUTHKEY && ! -z "$TS_AUTHKEY" ]]; then sudo -E tailscale up --authkey=$TS_AUTHKEY --accept-dns --accept-routes; fi
 
